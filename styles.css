@@ -27,7 +27,9 @@ html {
 }
 
 body {
-  background: #000;
+  background-image: url('images/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 section {
@@ -60,6 +62,12 @@ section {
 .header .navbar a {
   font-size: 1.7rem;
   color: #fff;
+  margin-left: 2rem;
+}
+
+.header .navbar a.active {
+  font-size: 1.7rem;
+  color: var(--theme-color);
   margin-left: 2rem;
 }
 
@@ -137,7 +145,7 @@ section {
 
 .service .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(calc((100% - 3 * 1.5rem) / 3), 1fr));
   gap: 1.5rem;
 }
 
